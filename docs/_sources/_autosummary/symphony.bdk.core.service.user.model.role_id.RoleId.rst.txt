@@ -1,0 +1,43 @@
+symphony.bdk.core.service.user.model.role\_id.RoleId
+====================================================
+
+.. currentmodule:: symphony.bdk.core.service.user.model.role_id
+
+.. autoclass:: RoleId
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+   
+   .. automethod:: __init__
+
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RoleId.ADMINISTRATOR
+      ~RoleId.AGENT
+      ~RoleId.AUDIT_TRAIL_MANAGEMENT
+      ~RoleId.CEP_VISIBILITY_GROUP_MANAGEMENT
+      ~RoleId.COMPLIANCE_OFFICER
+      ~RoleId.CONTENT_EXPORT_SERVICE
+      ~RoleId.CONTENT_MANAGEMENT
+      ~RoleId.EF_POLICY_MANAGEMENT
+      ~RoleId.INDIVIDUAL
+      ~RoleId.KEY_MANAGER
+      ~RoleId.L1_SUPPORT
+      ~RoleId.L2_SUPPORT
+      ~RoleId.MALWARE_SCAN_MANAGER
+      ~RoleId.MALWARE_SCAN_STATE_USER
+      ~RoleId.SCOPE_MANAGEMENT
+      ~RoleId.SUPER_ADMINISTRATOR
+      ~RoleId.SUPER_COMPLIANCE_OFFICER
+      ~RoleId.SYMPHONY_ADMIN
+      ~RoleId.USER_PROVISIONING
+   
+   

@@ -1,0 +1,25 @@
+symphony.bdk.core.service.message.multi\_attachments\_messages\_api.MultiAttachmentsMessagesApi
+===============================================================================================
+
+.. currentmodule:: symphony.bdk.core.service.message.multi_attachments_messages_api
+
+.. autoclass:: MultiAttachmentsMessagesApi
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MultiAttachmentsMessagesApi.__init__
+   
+   
+
+   
+   
+   

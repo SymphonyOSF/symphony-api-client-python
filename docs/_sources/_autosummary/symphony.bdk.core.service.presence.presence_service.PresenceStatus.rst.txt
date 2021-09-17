@@ -1,0 +1,32 @@
+symphony.bdk.core.service.presence.presence\_service.PresenceStatus
+===================================================================
+
+.. currentmodule:: symphony.bdk.core.service.presence.presence_service
+
+.. autoclass:: PresenceStatus
+   :members:
+   :show-inheritance:
+   :inherited-members:
+
+   
+   .. automethod:: __init__
+
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PresenceStatus.AVAILABLE
+      ~PresenceStatus.AWAY
+      ~PresenceStatus.BE_RIGHT_BACK
+      ~PresenceStatus.BUSY
+      ~PresenceStatus.IN_A_MEETING
+      ~PresenceStatus.OFF_WORK
+      ~PresenceStatus.ON_THE_PHONE
+      ~PresenceStatus.OUT_OF_OFFICE
+   
+   

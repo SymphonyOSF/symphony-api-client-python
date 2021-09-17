@@ -1,0 +1,616 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext" href="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext.html" /><link rel="prev" title="symphony.bdk.core.activity.user_joined_room" href="symphony.bdk.core.activity.user_joined_room.html" />
+
+    <link rel="shortcut icon" href="../_static/symphony-favicon.png"/><meta name="generator" content="sphinx-3.5.4, furo 2021.06.18.beta36"/>
+        <title>symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity - Symphony Python BDK documentation</title>
+      <link rel="stylesheet" href="../_static/styles/furo.css?digest=9b17055c4366e8b2949c66d6a9d8b0efe4dbaa60">
+    <link rel="stylesheet" href="../_static/pygments.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
+    <link rel="stylesheet" href="../_static/styles/furo-extensions.css?digest=ee12cdd73c4bbac24afec78d92c4afd7c2d8ea7f"></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Symphony Python BDK  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/symphony-logo.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Symphony Python BDK  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html">
+  <input class="sidebar-search" placeholder=Search name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/migration.html">Migration guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/authentication.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/datafeed.html">Datafeed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/activity-api.html">Activity API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/message_service.html">Message service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/stream_service.html">Stream service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/connection_service.html">Connection service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/application_service.html">Application service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/signal_service.html">Signal service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/presence_service.html">Presence service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/faq.html">FAQ</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="symphony.bdk.core.html">symphony.bdk.core</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="symphony.bdk.core.activity.html">symphony.bdk.core.activity</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.activity.api.html">symphony.bdk.core.activity.api</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.activity.api.AbstractActivity.html">symphony.bdk.core.activity.api.AbstractActivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.activity.api.ActivityContext.html">symphony.bdk.core.activity.api.ActivityContext</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.activity.command.html">symphony.bdk.core.activity.command</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.activity.command.CommandActivity.html">symphony.bdk.core.activity.command.CommandActivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.activity.command.CommandContext.html">symphony.bdk.core.activity.command.CommandContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.activity.command.SlashCommandActivity.html">symphony.bdk.core.activity.command.SlashCommandActivity</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.activity.exception.html">symphony.bdk.core.activity.exception</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.activity.exception.FatalActivityExecutionException.html">symphony.bdk.core.activity.exception.FatalActivityExecutionException</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.activity.form.html">symphony.bdk.core.activity.form</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label for="toctree-checkbox-6"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.activity.form.FormReplyActivity.html">symphony.bdk.core.activity.form.FormReplyActivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.activity.form.FormReplyContext.html">symphony.bdk.core.activity.form.FormReplyContext</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.activity.help_command.html">symphony.bdk.core.activity.help_command</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label for="toctree-checkbox-7"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.activity.help_command.HelpCommand.html">symphony.bdk.core.activity.help_command.HelpCommand</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.activity.registry.html">symphony.bdk.core.activity.registry</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label for="toctree-checkbox-8"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.activity.registry.ActivityRegistry.html">symphony.bdk.core.activity.registry.ActivityRegistry</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current has-children"><a class="reference internal" href="symphony.bdk.core.activity.user_joined_room.html">symphony.bdk.core.activity.user_joined_room</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label for="toctree-checkbox-9"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l4 current current-page"><a class="current reference internal" href="#">symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext.html">symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="symphony.bdk.core.auth.html">symphony.bdk.core.auth</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label for="toctree-checkbox-10"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.auth.auth_session.html">symphony.bdk.core.auth.auth_session</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label for="toctree-checkbox-11"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.auth_session.AppAuthSession.html">symphony.bdk.core.auth.auth_session.AppAuthSession</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.auth_session.AuthSession.html">symphony.bdk.core.auth.auth_session.AuthSession</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.auth_session.OboAuthSession.html">symphony.bdk.core.auth.auth_session.OboAuthSession</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.auth.authenticator_factory.html">symphony.bdk.core.auth.authenticator_factory</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label for="toctree-checkbox-12"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.authenticator_factory.AuthenticatorFactory.html">symphony.bdk.core.auth.authenticator_factory.AuthenticatorFactory</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.auth.bot_authenticator.html">symphony.bdk.core.auth.bot_authenticator</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label for="toctree-checkbox-13"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.bot_authenticator.BotAuthenticator.html">symphony.bdk.core.auth.bot_authenticator.BotAuthenticator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.bot_authenticator.BotAuthenticatorCert.html">symphony.bdk.core.auth.bot_authenticator.BotAuthenticatorCert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.bot_authenticator.BotAuthenticatorRsa.html">symphony.bdk.core.auth.bot_authenticator.BotAuthenticatorRsa</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.auth.exception.html">symphony.bdk.core.auth.exception</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label for="toctree-checkbox-14"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.exception.AuthInitializationError.html">symphony.bdk.core.auth.exception.AuthInitializationError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.exception.AuthUnauthorizedError.html">symphony.bdk.core.auth.exception.AuthUnauthorizedError</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.auth.ext_app_authenticator.html">symphony.bdk.core.auth.ext_app_authenticator</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label for="toctree-checkbox-15"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.ext_app_authenticator.ExtensionAppAuthenticator.html">symphony.bdk.core.auth.ext_app_authenticator.ExtensionAppAuthenticator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.ext_app_authenticator.ExtensionAppAuthenticatorCert.html">symphony.bdk.core.auth.ext_app_authenticator.ExtensionAppAuthenticatorCert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.ext_app_authenticator.ExtensionAppAuthenticatorRsa.html">symphony.bdk.core.auth.ext_app_authenticator.ExtensionAppAuthenticatorRsa</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.auth.jwt_helper.html">symphony.bdk.core.auth.jwt_helper</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label for="toctree-checkbox-16"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.jwt_helper.create_signed_jwt.html">symphony.bdk.core.auth.jwt_helper.create_signed_jwt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.jwt_helper.create_signed_jwt_with_claims.html">symphony.bdk.core.auth.jwt_helper.create_signed_jwt_with_claims</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.jwt_helper.validate_jwt.html">symphony.bdk.core.auth.jwt_helper.validate_jwt</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.auth.obo_authenticator.html">symphony.bdk.core.auth.obo_authenticator</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label for="toctree-checkbox-17"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.obo_authenticator.OboAuthenticator.html">symphony.bdk.core.auth.obo_authenticator.OboAuthenticator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.obo_authenticator.OboAuthenticatorCert.html">symphony.bdk.core.auth.obo_authenticator.OboAuthenticatorCert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.obo_authenticator.OboAuthenticatorRsa.html">symphony.bdk.core.auth.obo_authenticator.OboAuthenticatorRsa</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.auth.tokens_repository.html">symphony.bdk.core.auth.tokens_repository</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label for="toctree-checkbox-18"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.tokens_repository.InMemoryTokensRepository.html">symphony.bdk.core.auth.tokens_repository.InMemoryTokensRepository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.auth.tokens_repository.TokensRepository.html">symphony.bdk.core.auth.tokens_repository.TokensRepository</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="symphony.bdk.core.client.html">symphony.bdk.core.client</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label for="toctree-checkbox-19"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.client.api_client_factory.html">symphony.bdk.core.client.api_client_factory</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label for="toctree-checkbox-20"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.client.api_client_factory.ApiClientFactory.html">symphony.bdk.core.client.api_client_factory.ApiClientFactory</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.client.trace_id.html">symphony.bdk.core.client.trace_id</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label for="toctree-checkbox-21"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.client.trace_id.add_x_trace_id.html">symphony.bdk.core.client.trace_id.add_x_trace_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.client.trace_id.setup_trace_id_log_record_factory.html">symphony.bdk.core.client.trace_id.setup_trace_id_log_record_factory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.client.trace_id.DistributedTracingContext.html">symphony.bdk.core.client.trace_id.DistributedTracingContext</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="symphony.bdk.core.config.html">symphony.bdk.core.config</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label for="toctree-checkbox-22"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.config.exception.html">symphony.bdk.core.config.exception</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label for="toctree-checkbox-23"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.config.exception.BdkConfigError.html">symphony.bdk.core.config.exception.BdkConfigError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.config.exception.BotNotConfiguredError.html">symphony.bdk.core.config.exception.BotNotConfiguredError</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.config.loader.html">symphony.bdk.core.config.loader</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label for="toctree-checkbox-24"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.config.loader.BdkConfigLoader.html">symphony.bdk.core.config.loader.BdkConfigLoader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.config.loader.BdkConfigParser.html">symphony.bdk.core.config.loader.BdkConfigParser</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.config.model.html">symphony.bdk.core.config.model</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label for="toctree-checkbox-25"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_app_config.html">symphony.bdk.core.config.model.bdk_app_config</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label for="toctree-checkbox-26"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_app_config.BdkAppConfig.html">symphony.bdk.core.config.model.bdk_app_config.BdkAppConfig</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_authentication_config.html">symphony.bdk.core.config.model.bdk_authentication_config</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label for="toctree-checkbox-27"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_authentication_config.BdkAuthenticationConfig.html">symphony.bdk.core.config.model.bdk_authentication_config.BdkAuthenticationConfig</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_bot_config.html">symphony.bdk.core.config.model.bdk_bot_config</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label for="toctree-checkbox-28"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_bot_config.BdkBotConfig.html">symphony.bdk.core.config.model.bdk_bot_config.BdkBotConfig</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_certificate_config.html">symphony.bdk.core.config.model.bdk_certificate_config</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label for="toctree-checkbox-29"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_certificate_config.BdkCertificateConfig.html">symphony.bdk.core.config.model.bdk_certificate_config.BdkCertificateConfig</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_client_config.html">symphony.bdk.core.config.model.bdk_client_config</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label for="toctree-checkbox-30"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_client_config.BdkClientConfig.html">symphony.bdk.core.config.model.bdk_client_config.BdkClientConfig</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_config.html">symphony.bdk.core.config.model.bdk_config</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label for="toctree-checkbox-31"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_config.BdkConfig.html">symphony.bdk.core.config.model.bdk_config.BdkConfig</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_datafeed_config.html">symphony.bdk.core.config.model.bdk_datafeed_config</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label for="toctree-checkbox-32"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_datafeed_config.BdkDatafeedConfig.html">symphony.bdk.core.config.model.bdk_datafeed_config.BdkDatafeedConfig</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_retry_config.html">symphony.bdk.core.config.model.bdk_retry_config</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label for="toctree-checkbox-33"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_retry_config.BdkRetryConfig.html">symphony.bdk.core.config.model.bdk_retry_config.BdkRetryConfig</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_rsa_key_config.html">symphony.bdk.core.config.model.bdk_rsa_key_config</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label for="toctree-checkbox-34"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_rsa_key_config.BdkRsaKeyConfig.html">symphony.bdk.core.config.model.bdk_rsa_key_config.BdkRsaKeyConfig</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_server_config.html">symphony.bdk.core.config.model.bdk_server_config</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/><label for="toctree-checkbox-35"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_server_config.BdkProxyConfig.html">symphony.bdk.core.config.model.bdk_server_config.BdkProxyConfig</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_server_config.BdkServerConfig.html">symphony.bdk.core.config.model.bdk_server_config.BdkServerConfig</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_ssl_config.html">symphony.bdk.core.config.model.bdk_ssl_config</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/><label for="toctree-checkbox-36"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.config.model.bdk_ssl_config.BdkSslConfig.html">symphony.bdk.core.config.model.bdk_ssl_config.BdkSslConfig</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="symphony.bdk.core.retry.html">symphony.bdk.core.retry</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/><label for="toctree-checkbox-37"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="symphony.bdk.core.retry.retry.html">symphony.bdk.core.retry.retry</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.retry.strategy.html">symphony.bdk.core.retry.strategy</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/><label for="toctree-checkbox-38"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.retry.strategy.authentication_retry.html">symphony.bdk.core.retry.strategy.authentication_retry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.retry.strategy.can_authentication_be_retried.html">symphony.bdk.core.retry.strategy.can_authentication_be_retried</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.retry.strategy.is_client_error.html">symphony.bdk.core.retry.strategy.is_client_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.retry.strategy.is_client_timeout_error.html">symphony.bdk.core.retry.strategy.is_client_timeout_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.retry.strategy.is_network_or_minor_error.html">symphony.bdk.core.retry.strategy.is_network_or_minor_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.retry.strategy.is_network_or_minor_error_or_client.html">symphony.bdk.core.retry.strategy.is_network_or_minor_error_or_client</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.retry.strategy.is_unauthorized.html">symphony.bdk.core.retry.strategy.is_unauthorized</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.retry.strategy.read_datafeed_retry.html">symphony.bdk.core.retry.strategy.read_datafeed_retry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.retry.strategy.refresh_session_if_unauthorized.html">symphony.bdk.core.retry.strategy.refresh_session_if_unauthorized</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="symphony.bdk.core.service.html">symphony.bdk.core.service</a><input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/><label for="toctree-checkbox-39"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.service.application.html">symphony.bdk.core.service.application</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/><label for="toctree-checkbox-40"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.application.application_service.html">symphony.bdk.core.service.application.application_service</a><input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" type="checkbox"/><label for="toctree-checkbox-41"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.application.application_service.ApplicationService.html">symphony.bdk.core.service.application.application_service.ApplicationService</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.service.connection.html">symphony.bdk.core.service.connection</a><input class="toctree-checkbox" id="toctree-checkbox-42" name="toctree-checkbox-42" type="checkbox"/><label for="toctree-checkbox-42"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.connection.connection_service.html">symphony.bdk.core.service.connection.connection_service</a><input class="toctree-checkbox" id="toctree-checkbox-43" name="toctree-checkbox-43" type="checkbox"/><label for="toctree-checkbox-43"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.connection.connection_service.ConnectionService.html">symphony.bdk.core.service.connection.connection_service.ConnectionService</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.connection.connection_service.OboConnectionService.html">symphony.bdk.core.service.connection.connection_service.OboConnectionService</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.connection.model.html">symphony.bdk.core.service.connection.model</a><input class="toctree-checkbox" id="toctree-checkbox-44" name="toctree-checkbox-44" type="checkbox"/><label for="toctree-checkbox-44"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5 has-children"><a class="reference internal" href="symphony.bdk.core.service.connection.model.connection_status.html">symphony.bdk.core.service.connection.model.connection_status</a><input class="toctree-checkbox" id="toctree-checkbox-45" name="toctree-checkbox-45" type="checkbox"/><label for="toctree-checkbox-45"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6"><a class="reference internal" href="symphony.bdk.core.service.connection.model.connection_status.ConnectionStatus.html">symphony.bdk.core.service.connection.model.connection_status.ConnectionStatus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.service.datafeed.html">symphony.bdk.core.service.datafeed</a><input class="toctree-checkbox" id="toctree-checkbox-46" name="toctree-checkbox-46" type="checkbox"/><label for="toctree-checkbox-46"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.datafeed.abstract_datafeed_loop.html">symphony.bdk.core.service.datafeed.abstract_datafeed_loop</a><input class="toctree-checkbox" id="toctree-checkbox-47" name="toctree-checkbox-47" type="checkbox"/><label for="toctree-checkbox-47"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.datafeed.abstract_datafeed_loop.AbstractDatafeedLoop.html">symphony.bdk.core.service.datafeed.abstract_datafeed_loop.AbstractDatafeedLoop</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.datafeed.abstract_datafeed_loop.DatafeedVersion.html">symphony.bdk.core.service.datafeed.abstract_datafeed_loop.DatafeedVersion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.datafeed.abstract_datafeed_loop.RealTimeEvent.html">symphony.bdk.core.service.datafeed.abstract_datafeed_loop.RealTimeEvent</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.datafeed.datafeed_loop_v1.html">symphony.bdk.core.service.datafeed.datafeed_loop_v1</a><input class="toctree-checkbox" id="toctree-checkbox-48" name="toctree-checkbox-48" type="checkbox"/><label for="toctree-checkbox-48"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.datafeed.datafeed_loop_v1.DatafeedLoopV1.html">symphony.bdk.core.service.datafeed.datafeed_loop_v1.DatafeedLoopV1</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.datafeed.datafeed_loop_v2.html">symphony.bdk.core.service.datafeed.datafeed_loop_v2</a><input class="toctree-checkbox" id="toctree-checkbox-49" name="toctree-checkbox-49" type="checkbox"/><label for="toctree-checkbox-49"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.datafeed.datafeed_loop_v2.DatafeedLoopV2.html">symphony.bdk.core.service.datafeed.datafeed_loop_v2.DatafeedLoopV2</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.datafeed.exception.html">symphony.bdk.core.service.datafeed.exception</a><input class="toctree-checkbox" id="toctree-checkbox-50" name="toctree-checkbox-50" type="checkbox"/><label for="toctree-checkbox-50"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.datafeed.exception.EventError.html">symphony.bdk.core.service.datafeed.exception.EventError</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.datafeed.on_disk_datafeed_id_repository.html">symphony.bdk.core.service.datafeed.on_disk_datafeed_id_repository</a><input class="toctree-checkbox" id="toctree-checkbox-51" name="toctree-checkbox-51" type="checkbox"/><label for="toctree-checkbox-51"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.datafeed.on_disk_datafeed_id_repository.DatafeedIdRepository.html">symphony.bdk.core.service.datafeed.on_disk_datafeed_id_repository.DatafeedIdRepository</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.datafeed.on_disk_datafeed_id_repository.OnDiskDatafeedIdRepository.html">symphony.bdk.core.service.datafeed.on_disk_datafeed_id_repository.OnDiskDatafeedIdRepository</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.datafeed.real_time_event_listener.html">symphony.bdk.core.service.datafeed.real_time_event_listener</a><input class="toctree-checkbox" id="toctree-checkbox-52" name="toctree-checkbox-52" type="checkbox"/><label for="toctree-checkbox-52"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.datafeed.real_time_event_listener.RealTimeEventListener.html">symphony.bdk.core.service.datafeed.real_time_event_listener.RealTimeEventListener</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.service.exception.html">symphony.bdk.core.service.exception</a><input class="toctree-checkbox" id="toctree-checkbox-53" name="toctree-checkbox-53" type="checkbox"/><label for="toctree-checkbox-53"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.service.exception.MessageCreationError.html">symphony.bdk.core.service.exception.MessageCreationError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.service.exception.MessageParserError.html">symphony.bdk.core.service.exception.MessageParserError</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.service.health.html">symphony.bdk.core.service.health</a><input class="toctree-checkbox" id="toctree-checkbox-54" name="toctree-checkbox-54" type="checkbox"/><label for="toctree-checkbox-54"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.health.health_service.html">symphony.bdk.core.service.health.health_service</a><input class="toctree-checkbox" id="toctree-checkbox-55" name="toctree-checkbox-55" type="checkbox"/><label for="toctree-checkbox-55"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.health.health_service.HealthService.html">symphony.bdk.core.service.health.health_service.HealthService</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.service.message.html">symphony.bdk.core.service.message</a><input class="toctree-checkbox" id="toctree-checkbox-56" name="toctree-checkbox-56" type="checkbox"/><label for="toctree-checkbox-56"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.message.message_parser.html">symphony.bdk.core.service.message.message_parser</a><input class="toctree-checkbox" id="toctree-checkbox-57" name="toctree-checkbox-57" type="checkbox"/><label for="toctree-checkbox-57"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.message.message_parser.get_cashtags.html">symphony.bdk.core.service.message.message_parser.get_cashtags</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.message.message_parser.get_emojis.html">symphony.bdk.core.service.message.message_parser.get_emojis</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.message.message_parser.get_hashtags.html">symphony.bdk.core.service.message.message_parser.get_hashtags</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.message.message_parser.get_mentions.html">symphony.bdk.core.service.message.message_parser.get_mentions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.message.message_parser.get_text_content_from_message.html">symphony.bdk.core.service.message.message_parser.get_text_content_from_message</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.message.message_service.html">symphony.bdk.core.service.message.message_service</a><input class="toctree-checkbox" id="toctree-checkbox-58" name="toctree-checkbox-58" type="checkbox"/><label for="toctree-checkbox-58"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.message.message_service.MessageService.html">symphony.bdk.core.service.message.message_service.MessageService</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.message.message_service.OboMessageService.html">symphony.bdk.core.service.message.message_service.OboMessageService</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.message.messageml_util.html">symphony.bdk.core.service.message.messageml_util</a><input class="toctree-checkbox" id="toctree-checkbox-59" name="toctree-checkbox-59" type="checkbox"/><label for="toctree-checkbox-59"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.message.messageml_util.escape_special_chars.html">symphony.bdk.core.service.message.messageml_util.escape_special_chars</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.message.model.html">symphony.bdk.core.service.message.model</a><input class="toctree-checkbox" id="toctree-checkbox-60" name="toctree-checkbox-60" type="checkbox"/><label for="toctree-checkbox-60"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.message.model.Message.html">symphony.bdk.core.service.message.model.Message</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.message.multi_attachments_messages_api.html">symphony.bdk.core.service.message.multi_attachments_messages_api</a><input class="toctree-checkbox" id="toctree-checkbox-61" name="toctree-checkbox-61" type="checkbox"/><label for="toctree-checkbox-61"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.message.multi_attachments_messages_api.MultiAttachmentsMessagesApi.html">symphony.bdk.core.service.message.multi_attachments_messages_api.MultiAttachmentsMessagesApi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.service.obo_services.html">symphony.bdk.core.service.obo_services</a><input class="toctree-checkbox" id="toctree-checkbox-62" name="toctree-checkbox-62" type="checkbox"/><label for="toctree-checkbox-62"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.service.obo_services.OboServices.html">symphony.bdk.core.service.obo_services.OboServices</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.service.pagination.html">symphony.bdk.core.service.pagination</a><input class="toctree-checkbox" id="toctree-checkbox-63" name="toctree-checkbox-63" type="checkbox"/><label for="toctree-checkbox-63"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.service.pagination.cursor_based_pagination.html">symphony.bdk.core.service.pagination.cursor_based_pagination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="symphony.bdk.core.service.pagination.offset_based_pagination.html">symphony.bdk.core.service.pagination.offset_based_pagination</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.service.presence.html">symphony.bdk.core.service.presence</a><input class="toctree-checkbox" id="toctree-checkbox-64" name="toctree-checkbox-64" type="checkbox"/><label for="toctree-checkbox-64"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.presence.presence_service.html">symphony.bdk.core.service.presence.presence_service</a><input class="toctree-checkbox" id="toctree-checkbox-65" name="toctree-checkbox-65" type="checkbox"/><label for="toctree-checkbox-65"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.presence.presence_service.OboPresenceService.html">symphony.bdk.core.service.presence.presence_service.OboPresenceService</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.presence.presence_service.PresenceService.html">symphony.bdk.core.service.presence.presence_service.PresenceService</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.presence.presence_service.PresenceStatus.html">symphony.bdk.core.service.presence.presence_service.PresenceStatus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.service.session.html">symphony.bdk.core.service.session</a><input class="toctree-checkbox" id="toctree-checkbox-66" name="toctree-checkbox-66" type="checkbox"/><label for="toctree-checkbox-66"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.session.session_service.html">symphony.bdk.core.service.session.session_service</a><input class="toctree-checkbox" id="toctree-checkbox-67" name="toctree-checkbox-67" type="checkbox"/><label for="toctree-checkbox-67"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.session.session_service.OboSessionService.html">symphony.bdk.core.service.session.session_service.OboSessionService</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.session.session_service.SessionService.html">symphony.bdk.core.service.session.session_service.SessionService</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.service.signal.html">symphony.bdk.core.service.signal</a><input class="toctree-checkbox" id="toctree-checkbox-68" name="toctree-checkbox-68" type="checkbox"/><label for="toctree-checkbox-68"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.signal.signal_service.html">symphony.bdk.core.service.signal.signal_service</a><input class="toctree-checkbox" id="toctree-checkbox-69" name="toctree-checkbox-69" type="checkbox"/><label for="toctree-checkbox-69"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.signal.signal_service.OboSignalService.html">symphony.bdk.core.service.signal.signal_service.OboSignalService</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.signal.signal_service.SignalService.html">symphony.bdk.core.service.signal.signal_service.SignalService</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.service.stream.html">symphony.bdk.core.service.stream</a><input class="toctree-checkbox" id="toctree-checkbox-70" name="toctree-checkbox-70" type="checkbox"/><label for="toctree-checkbox-70"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.stream.stream_service.html">symphony.bdk.core.service.stream.stream_service</a><input class="toctree-checkbox" id="toctree-checkbox-71" name="toctree-checkbox-71" type="checkbox"/><label for="toctree-checkbox-71"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.stream.stream_service.OboStreamService.html">symphony.bdk.core.service.stream.stream_service.OboStreamService</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.stream.stream_service.StreamService.html">symphony.bdk.core.service.stream.stream_service.StreamService</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.stream.stream_util.html">symphony.bdk.core.service.stream.stream_util</a><input class="toctree-checkbox" id="toctree-checkbox-72" name="toctree-checkbox-72" type="checkbox"/><label for="toctree-checkbox-72"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.stream.stream_util.from_url_safe_stream_id.html">symphony.bdk.core.service.stream.stream_util.from_url_safe_stream_id</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.stream.stream_util.to_url_safe_stream_id.html">symphony.bdk.core.service.stream.stream_util.to_url_safe_stream_id</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="symphony.bdk.core.service.user.html">symphony.bdk.core.service.user</a><input class="toctree-checkbox" id="toctree-checkbox-73" name="toctree-checkbox-73" type="checkbox"/><label for="toctree-checkbox-73"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.user.model.html">symphony.bdk.core.service.user.model</a><input class="toctree-checkbox" id="toctree-checkbox-74" name="toctree-checkbox-74" type="checkbox"/><label for="toctree-checkbox-74"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5 has-children"><a class="reference internal" href="symphony.bdk.core.service.user.model.delegate_action_enum.html">symphony.bdk.core.service.user.model.delegate_action_enum</a><input class="toctree-checkbox" id="toctree-checkbox-75" name="toctree-checkbox-75" type="checkbox"/><label for="toctree-checkbox-75"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6"><a class="reference internal" href="symphony.bdk.core.service.user.model.delegate_action_enum.DelegateActionEnum.html">symphony.bdk.core.service.user.model.delegate_action_enum.DelegateActionEnum</a></li>
+</ul>
+</li>
+<li class="toctree-l5 has-children"><a class="reference internal" href="symphony.bdk.core.service.user.model.role_id.html">symphony.bdk.core.service.user.model.role_id</a><input class="toctree-checkbox" id="toctree-checkbox-76" name="toctree-checkbox-76" type="checkbox"/><label for="toctree-checkbox-76"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6"><a class="reference internal" href="symphony.bdk.core.service.user.model.role_id.RoleId.html">symphony.bdk.core.service.user.model.role_id.RoleId</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="symphony.bdk.core.service.user.user_service.html">symphony.bdk.core.service.user.user_service</a><input class="toctree-checkbox" id="toctree-checkbox-77" name="toctree-checkbox-77" type="checkbox"/><label for="toctree-checkbox-77"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.user.user_service.OboUserService.html">symphony.bdk.core.service.user.user_service.OboUserService</a></li>
+<li class="toctree-l5"><a class="reference internal" href="symphony.bdk.core.service.user.user_service.UserService.html">symphony.bdk.core.service.user.user_service.UserService</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="symphony.bdk.core.service_factory.html">symphony.bdk.core.service_factory</a><input class="toctree-checkbox" id="toctree-checkbox-78" name="toctree-checkbox-78" type="checkbox"/><label for="toctree-checkbox-78"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="symphony.bdk.core.service_factory.OboServiceFactory.html">symphony.bdk.core.service_factory.OboServiceFactory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="symphony.bdk.core.service_factory.ServiceFactory.html">symphony.bdk.core.service_factory.ServiceFactory</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="symphony.bdk.core.symphony_bdk.html">symphony.bdk.core.symphony_bdk</a><input class="toctree-checkbox" id="toctree-checkbox-79" name="toctree-checkbox-79" type="checkbox"/><label for="toctree-checkbox-79"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="symphony.bdk.core.symphony_bdk.app_service.html">symphony.bdk.core.symphony_bdk.app_service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="symphony.bdk.core.symphony_bdk.bot_service.html">symphony.bdk.core.symphony_bdk.bot_service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="symphony.bdk.core.symphony_bdk.SymphonyBdk.html">symphony.bdk.core.symphony_bdk.SymphonyBdk</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="symphony-bdk-core-activity-user-joined-room-userjoinedroomactivity">
+<h1>symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity<a class="headerlink" href="#symphony-bdk-core-activity-user-joined-room-userjoinedroomactivity" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">symphony.bdk.core.activity.user_joined_room.</span></code><code class="sig-name descname"><span class="pre">UserJoinedRoomActivity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="symphony.bdk.core.activity.api.AbstractActivity.html#symphony.bdk.core.activity.api.AbstractActivity" title="symphony.bdk.core.activity.api.AbstractActivity"><code class="xref py py-class docutils literal notranslate"><span class="pre">symphony.bdk.core.activity.api.AbstractActivity</span></code></a>[<a class="reference internal" href="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext.html#symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext" title="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext</span></code></a>]</p>
+<p>A form reply activity corresponds to a User joining a room .</p>
+<dl class="py method">
+<dt id="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.__init__">
+<code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+<p class="rubric">Methods</p>
+<div class="table-wrapper"><table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%"/>
+<col style="width: 90%"/>
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.__init__" title="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>()</p></td>
+<td><p>Initialize self.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.before_matcher" title="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.before_matcher"><code class="xref py py-obj docutils literal notranslate"><span class="pre">before_matcher</span></code></a>(context)</p></td>
+<td><p>This callback can be used to prepare <code class="xref py py-class docutils literal notranslate"><span class="pre">ActivityContext</span></code> before actually processing the <cite>matches</cite> method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.matches" title="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.matches"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matches</span></code></a>(context)</p></td>
+<td><p>Matches the <code class="xref py py-class docutils literal notranslate"><span class="pre">ActivityContext</span></code> to decide whether an <code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractActivity</span></code> can be executed or not.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.on_activity" title="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.on_activity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_activity</span></code></a>(context)</p></td>
+<td><p>Contains the activity business logic.</p></td>
+</tr>
+</tbody>
+</table></div>
+<dl class="py method">
+<dt id="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.before_matcher">
+<code class="sig-name descname"><span class="pre">before_matcher</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">C</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.before_matcher" title="Permalink to this definition">¶</a></dt>
+<dd><p>This callback can be used to prepare <code class="xref py py-class docutils literal notranslate"><span class="pre">ActivityContext</span></code> before actually processing the <cite>matches</cite>
+method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context</strong> – an instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">ActivityContext</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt id="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.matches">
+<code class="sig-name descname"><span class="pre">matches</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext.html#symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext" title="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext"><span class="pre">symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext</span></a></span></em><span class="sig-paren">)</span> → <span class="pre">bool</span><a class="headerlink" href="#symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matches the <code class="xref py py-class docutils literal notranslate"><span class="pre">ActivityContext</span></code> to decide whether an <code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractActivity</span></code> can be executed
+or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context</strong> – an instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">ActivityContext</span></code></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if activity has to be triggered, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt id="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.on_activity">
+<em class="property"><span class="pre">async</span> </em><code class="sig-name descname"><span class="pre">on_activity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext.html#symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext" title="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext"><span class="pre">symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.on_activity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains the activity business logic. Executed only if the <cite>matches</cite> method returned a true value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>context</strong> – an instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">ActivityContext</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+</div>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">symphony.bdk.core.activity.user_joined_room.UserJoinedRoomContext</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="symphony.bdk.core.activity.user_joined_room.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">symphony.bdk.core.activity.user_joined_room</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021, Symphony Communication Services LLC
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../_sources/_autosummary/symphony.bdk.core.activity.user_joined_room.UserJoinedRoomActivity.rst.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </main>
+</div>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
+</html>
